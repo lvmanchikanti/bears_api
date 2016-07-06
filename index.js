@@ -14,7 +14,9 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
 
 server.get('/bears' , function(request, response){
-
+  var read = db.get('bears')
+                .value();
+  response.send(read);
 });
 
 server.get('/bears/:id', function(request, response){
