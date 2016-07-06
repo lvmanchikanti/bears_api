@@ -1,0 +1,30 @@
+{
+  "bears": [
+    {},
+    {
+      "id": "101e4d54-5b88-4824-b5b9-892542916747",
+      "isHungry": false,
+      "hasKids": false
+    },
+    {
+      "id": "e6509dc7-7435-4202-81de-845a4a15a73d",
+      "isHungry": false,
+      "hasKids": false
+    },
+    {
+      "id": "8ab3d031-41cd-42c2-b32c-a3f36bb3b110",
+      "isHungry": false,
+      "hasKids": false
+    },
+    {
+      "id": "e812a9fa-1138-4d55-96db-09e7f338a9c7",
+      "isHungry": false,
+      "hasKids": false
+    },
+    {
+      "id": "444db380-6185-4222-8faa-2b4be0b8f777",
+      "isHungry": false,
+      "hasKids": false
+    }
+  ]
+}
