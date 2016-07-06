@@ -13,12 +13,16 @@ db.defaults({bears: []})
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
 
-server.get('/bears' , function(){
-  response.send('GET bears');
+server.get('/bears' , function(request, response){
+
 });
 
-server.get('/bears/:id', function(){
-  response.send('GET bears :id');
+server.get('/bears/:id', function(request, response){
+  var bear = db.get('bears')
+                .find({id: request.params.id})
+                .value();
+
+    response.send(bear);
 });
 
 server.post('/bears', function(request, response){
@@ -35,11 +39,11 @@ server.post('/bears', function(request, response){
   response.send(result);
 });
 
-server.put('/bears/:id', function(){
+server.put('/bears/:id', function(request, response){
   response.send('PUT bears :id');
 });
 
-server.delete('/bears/:id', function(){
+server.delete('/bears/:id', function(request, response){
   response.send('DELETE bears :id');
 });
 
