@@ -19,6 +19,68 @@
       "id": "444db380-6185-4222-8faa-2b4be0b8f777",
       "isHungry": false,
       "hasKids": false
+    },
+    {
+      "id": "d337257a-f587-450b-ba31-7a13103bd7f9",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "7dd03624-8011-40cb-bc0c-83db796d1905",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "83ae0c78-53db-48ef-9693-ea42174284bf",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "f62555f1-3cb5-4bcd-931c-48cf627df112",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "5b620fb3-1708-4e06-a7c7-0e841cd37e8a",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "eb9618dc-ccc5-42ee-b713-fd9574ba6de9",
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
+    },
+    {
+      "id": "45498249-ef2b-4a38-968a-5698585d93d9",
+      "isHungry": false,
+      "hasKids": false,
+      "type": "grizzly",
+      "gender": "male",
+      "isAwake": false
+    },
+    {
+      "id": "2aa5a0ee-1c24-4ed6-b053-6ab1f04c9bcc",
+      "isHungry": false,
+      "hasKids": false,
+      "type": "grizzly",
+      "gender": "male",
+      "isAwake": false,
+      "size": "large"
+    },
+    {
+      "id": "78e132e1-f34b-4578-80bc-aa73317baf37",
+      "isHungry": false,
+      "hasKids": false,
+      "type": "polar",
+      "gender": "female",
+      "isAwake": false,
+      "size": "medium"
     }
   ]
 }

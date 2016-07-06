@@ -31,7 +31,11 @@ server.post('/bears', function(request, response){
   var bear = {
     id: uuid.v4(),
     isHungry: false,
-    hasKids: false
+    hasKids: false,
+    type: request.body.type,
+    gender: request.body.gender,
+    isAwake: false,
+    size: request.body.size
   };
 
   var result = db.get('bears')
