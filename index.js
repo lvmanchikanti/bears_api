@@ -42,11 +42,23 @@ server.post('/bears', function(request, response){
 });
 
 server.put('/bears/:id', function(request, response){
-  response.send('PUT bears :id');
+  var updateInfo = {
+    isHungry: request.body.isHungry,
+    hasKids: request.body.hasKids
+  };
+  var updatedBear = db.get('bears')
+                      .find({id: request.params.id})
+                      .assign(updateInfo)
+                      .value();
+  response.send(updatedBear);
 });
 
 server.delete('/bears/:id', function(request, response){
-  response.send('DELETE bears :id');
+  var bear = db.get('bears')
+                .remove({id: request.params.id})
+                .value();
+
+  response.send(bear);
 });
 
 
