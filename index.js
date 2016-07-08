@@ -28,16 +28,7 @@ server.get('/bears/:id', function(request, response){
 });
 
 server.post('/bears', function(request, response){
-  var bear = {
-    id: uuid.v4(),
-    isHungry: false,
-    hasKids: false,
-    type: request.body.type,
-    gender: request.body.gender,
-    isAwake: false,
-    size: request.body.size
-  };
-
+  var bear = new Bear(request.body.type, request.body.gender, request.body.size)
   var result = db.get('bears')
                 .push(bear)
                 .last()
@@ -46,13 +37,13 @@ server.post('/bears', function(request, response){
 });
 
 server.put('/bears/:id', function(request, response){
-  var updateInfo = {
-    isHungry: request.body.isHungry,
-    hasKids: request.body.hasKids
-  };
+  var bear = new Bear(request.body.type, request.params.id);
+  bear.updateHungry(request.body.isHungry);
+  bear.updateAwake(request.body.isAwake);
+  bear.updateKids(request.body.hasKids);
   var updatedBear = db.get('bears')
                       .find({id: request.params.id})
-                      .assign(updateInfo)
+                      .assign(bear)
                       .value();
   response.send(updatedBear);
 });
