@@ -1,10 +1,15 @@
 var uuid = require('uuid')
 //bear constructor that hold all the objects in the schema
-function Bear(type, gender, size, id){
+
+// var str = "fish bamboo eucalyptus ice honey";
+// var diet = str.split(" ");
+
+function Bear(type, gender, size, diet, id){
   this.id = id || uuid.v4();
   this.type = type;  //manually make array w/ koala, panda, polar, grizzly, black
   this.gender = gender; //if else thing
   this.size = size; //if else if else thing
+  this.diet = diet.split(" ");
   this.isHungry = false;
   this.hasKids = false;
   this.isAwake = false;

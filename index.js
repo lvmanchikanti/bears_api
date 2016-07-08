@@ -30,7 +30,7 @@ server.get('/bears/:id', function(request, response){
 });
 
 server.post('/bears', function(request, response){
-  var bear = new Bear(request.body.type, request.body.gender, request.body.size)
+  var bear = new Bear(request.body.type, request.body.gender, request.body.size, request.body.diet)
   var result = db.get('bears')
                 .push(bear)
                 .last()
@@ -39,7 +39,7 @@ server.post('/bears', function(request, response){
 });
 
 server.put('/bears/:id', function(request, response){
-  var bear = new Bear(request.body.type, request.body.gender, request.body.size, request.params.id);
+  var bear = new Bear(request.body.type, request.body.gender, request.body.size, request.body.diet, request.params.id);
   bear.updateHungry(request.body.isHungry);
   bear.updateAwake(request.body.isAwake);
   bear.updateKids(request.body.hasKids);

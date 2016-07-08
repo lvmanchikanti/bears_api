@@ -65,22 +65,46 @@
       "isAwake": false
     },
     {
-      "id": "2aa5a0ee-1c24-4ed6-b053-6ab1f04c9bcc",
-      "isHungry": true,
+      "id": "ice",
+      "isHungry": false,
       "hasKids": true,
       "type": "polar",
       "gender": "female",
       "isAwake": true,
-      "size": "small"
+      "size": "small",
+      "diet": [
+        "fish",
+        "bamboo",
+        "honey",
+        "eucalyptus leaves",
+        "ice"
+      ]
     },
     {
       "id": "78e132e1-f34b-4578-80bc-aa73317baf37",
       "isHungry": false,
-      "hasKids": false,
+      "hasKids": true,
       "type": "polar",
       "gender": "female",
-      "isAwake": false,
-      "size": "medium"
+      "isAwake": true,
+      "size": "small",
+      "diet": [
+        "fish",
+        "ice"
+      ]
+    },
+    {
+      "id": "bf2e1a96-f2cb-431b-aac0-ec32a1c46521",
+      "type": "panda",
+      "gender": "male",
+      "size": "big",
+      "diet": [
+        "bamboo",
+        "honey"
+      ],
+      "isHungry": false,
+      "hasKids": false,
+      "isAwake": false
     }
   ]
 }
