@@ -66,12 +66,12 @@
     },
     {
       "id": "2aa5a0ee-1c24-4ed6-b053-6ab1f04c9bcc",
-      "isHungry": false,
-      "hasKids": false,
-      "type": "grizzly",
-      "gender": "male",
-      "isAwake": false,
-      "size": "large"
+      "isHungry": true,
+      "hasKids": true,
+      "type": "polar",
+      "gender": "female",
+      "isAwake": true,
+      "size": "small"
     },
     {
       "id": "78e132e1-f34b-4578-80bc-aa73317baf37",

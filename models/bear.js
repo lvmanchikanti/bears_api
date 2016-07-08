@@ -3,8 +3,8 @@ var uuid = require('uuid')
 function Bear(type, gender, size, id){
   this.id = id || uuid.v4();
   this.type = type;  //manually make array w/ koala, panda, polar, grizzly, black
-  // this.gender = gender; //if else thing
-  // this.size = size; //if else if else thing
+  this.gender = gender; //if else thing
+  this.size = size; //if else if else thing
   this.isHungry = false;
   this.hasKids = false;
   this.isAwake = false;

@@ -4,6 +4,8 @@ var lowdb = require('lowdb');
 var uuid = require('uuid');
 var server = express();
 
+var Bear = require('./models/bear.js');
+
 var port = process.env.PORT || 8080;
 var db = lowdb('db.json');
 
@@ -37,7 +39,7 @@ server.post('/bears', function(request, response){
 });
 
 server.put('/bears/:id', function(request, response){
-  var bear = new Bear(request.body.type, request.params.id);
+  var bear = new Bear(request.body.type, request.body.gender, request.body.size, request.params.id);
   bear.updateHungry(request.body.isHungry);
   bear.updateAwake(request.body.isAwake);
   bear.updateKids(request.body.hasKids);
