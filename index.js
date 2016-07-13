@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var lowdb = require('lowdb');
 var uuid = require('uuid');
 var server = express();
+var cors = require('cors');
 
 var Bear = require('./models/bear.js');
 
@@ -14,6 +15,7 @@ db.defaults({bears: []})
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
+server.use(cors());
 
 server.get('/bears' , function(request, response){
   var read = db.get('bears')
